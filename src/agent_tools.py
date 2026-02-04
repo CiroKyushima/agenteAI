@@ -132,6 +132,25 @@ def tool_risco_servico(threshold: float = 0.85) -> dict:
     """
     return t.check_service_risk(t.df.copy(), threshold=threshold)
 
+# =========================
+# 8) Relatório executivo (texto + PDF)
+# =========================
+def tool_gerar_relatorio(top_n: int = 5) -> str:
+    """
+    Gera um relatório executivo em texto com os principais indicadores do dataset.
+    """
+    return t.gerar_relatorio_executivo(t.df.copy(), top_n=top_n)
+
+
+def tool_gerar_relatorio_pdf(top_n: int = 5, output_path: str = "reports/relatorio_executivo.pdf") -> str:
+    """
+    Gera o relatório executivo e salva em PDF.
+    Retorna o caminho do arquivo gerado.
+    """
+    return t.gerar_relatorio_pdf(t.df.copy(), output_path=output_path, top_n=top_n)
+
+
+
 TOOLS = [
     FunctionTool.from_defaults(fn=tool_consulta_geral, name="consulta_geral"),
         # 1) Planejamento / ruptura
@@ -158,4 +177,7 @@ TOOLS = [
 
     # 7) Risco serviço
     FunctionTool.from_defaults(fn=tool_risco_servico, name="risco_servico"),
+    # 8) relatorio
+    FunctionTool.from_defaults(fn=tool_gerar_relatorio, name="gerar_relatorio"),
+    FunctionTool.from_defaults(fn=tool_gerar_relatorio_pdf, name="gerar_relatorio_pdf"),
 ]
