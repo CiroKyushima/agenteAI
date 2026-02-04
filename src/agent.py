@@ -10,7 +10,6 @@ from llama_index.core import Settings
 
 load_dotenv()
 
-# ReActAgent import varia por versão -> fallback
 try:
     from llama_index.core.agent.workflow import ReActAgent
 except Exception:
@@ -21,7 +20,6 @@ from agent_tools import TOOLS
 
 
 def get_agent():
-    # LlamaIndex usa Settings.llm (padrão)
     Settings.llm = OpenAI(
         model="gpt-4o-mini",
         api_key=os.getenv("OPENAI_API_KEY"),
