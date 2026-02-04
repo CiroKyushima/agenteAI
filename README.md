@@ -6,8 +6,7 @@ Este projeto implementa um Agente de IA orientado a dados, projetado para analis
 * 📊 Análise de vendas baseada em CSV com cálculos reais via ferramentas
 * 🧠 Arquitetura ReAct Agent com tomada de decisão orientada a tools
 * 📄 Geração automática de Relatório Executivo em PDF
-* 🎯 Avaliação de impacto de promoções, planejamento e desempenho
-* 🚚 Monitoramento de nível de serviço e detecção de riscos operacionais
+* 🎯 Analise de ferramentas analiticas utilizadas
 * 🔍 Consulta inteligente para perguntas complexas sobre o dataset
 * 🐳 Aplicação totalmente executável via Docker
 * 🏗️ Estrutura modular com separação entre agente, tools e analytics
