@@ -41,7 +41,7 @@ cd Agent-Based-Sales-Data-Analyzer
 pip install -r requirements.txt
 
 # 3️⃣ Criar arquivo .env na pasta do projeto
-dentro do .env: OPENAI_API_KEY=sua_chave_aqui
+coloque: OPENAI_API_KEY=sua_chave_aqui
 
 #4️⃣ Executar o projeto:
 python src/main.py
