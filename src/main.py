@@ -1,4 +1,3 @@
-# main.py
 import asyncio
 from llama_index.core.workflow import Context
 from agent import get_agent
